@@ -1,10 +1,10 @@
 # Dragonball Game
 
-Welcome to Dragonball Game! This is an exciting game inspired by the popular Dragon Ball series.
+Welcome to my Dragonball Game! This is an exciting turn-based battle game inspired by the popular Dragon Ball series.
 
 ## Description
 
-Dragonball Game is a [brief description of your game]. It features [key features or gameplay mechanics]. The objective of the game is [explain the goal or objective of the game].
+Dragonball  Game is a strategic turn-based game where players can control various characters from the Dragon Ball universe. It features a variety of abilities and special attacks, a health bar system, and animations for special attacks. The objective of the game is to defeat your opponent by strategically using your abilities and managing your health.
 
 ## Installation
 
@@ -16,22 +16,14 @@ To play Dragonball Game, follow these steps:
 
 ## Controls
 
-- [List the controls or keybindings for your game]
+- Use the mouse to select abilities and targets
+- [Add any other controls or keybindings for your game]
 
 ## Screenshots
 
 ![Screenshot 1](/path/to/screenshot1.png)
 ![Screenshot 2](/path/to/screenshot2.png)
 
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to Dragonball Game, please follow these guidelines:
-
-1. Fork the repository
-2. Create a new branch: `git checkout -b feature/your-feature`
-3. Make your changes and commit them: `git commit -m 'Add your feature'`
-4. Push to the branch: `git push origin feature/your-feature`
-5. Submit a pull request
 
 ## License
 

@@ -545,3 +545,18 @@ class Ability {
       }
     }
   }
+
+  class Deck {
+    constructor(cards) {
+      this.cards = cards;
+      this.shuffle();
+    }
+
+    shuffle() {
+      this.cards.sort(() => Math.random() - 0.5);
+  }
+
+  drawCard() {
+    return this.cards.length > 0 ? this.cards.shift() : null;
+  }
+}
