@@ -1,13 +1,26 @@
 /**
- * TODO = Kontrollieren ob die Fähigkeit genutzt werden kann und ob sie Schaden anrichtet oder nicht und ob der Gegner besiegt wurde.
- * TODO = Implementieren der Fähigkeiten der Charaktere aus Dragonball Z in JavaScript, um ein einfaches Kampfspiel zu erstellen.
- * TODO verbesserung in den einzelnen Klassen und Methoden sowie die Logik der Fähigkeiten und Charaktere kontrollieren.
- * TODO = Implementieren von Fähigkeiten, die nur von bestimmten Charakteren verwendet werden können.
- * TODO = Implementieren von Fähigkeiten, die nur unter bestimmten Bedingungen aktiviert werden können.
- * TODO = Implementieren von Fähigkeiten, die nur einmal pro Kampf verwendet werden können.
- * TODO = Implementieren von Fähigkeiten, die nur einmal pro Kampf und nur unter bestimmten Bedingungen aktiviert werden können.
- *
- **/
+ * @file game.js
+ * @module game
+ * @description This file is the main file for the game logic.
+ * It contains the game loop and the game states.
+ * It also imports the classes from the classes folder and creates instances of the classes to use in the game.
+ * @requires Ability
+ * @requires Card
+ * @requires Character
+ * @requires Deck
+ * @requires Enemy
+ * @requires Battle
+ * @requires GAME_STATES
+ * @requires playerAction
+ * @requires enemyAction
+ * @requires gameLoop
+ * TODO: Implement the game loop and the game states.
+ * TODO: Implement the playerAction and enemyAction functions.
+ * TODO: Implement the game loop with the player and enemy turns.
+ * TODO: Implement the game over condition, when the player or enemy health reaches 0.
+ * ! This file is not complete and is only a starting point for the game logic.
+ * 
+ */
 
 import { Ability } from "./classes/Ability.js";
 import { Card } from "./classes/Card.js";
@@ -15,8 +28,6 @@ import { Character } from "./classes/Character.js";
 import { Deck } from "./classes/Deck.js";
 import { Enemy } from "./classes/Enemy.js";
 import { Battle } from "./classes/Battle.js";
-
-
 
 const GAME_STATES = {
   PLAYER_TURN: "playerTurn",
@@ -205,7 +216,6 @@ const card = deck.draw(); // Spieler zieht eine Karte
 
 console.log(`Gezogene Karte: ${card.ability.name}`);
 card.use(player); // Verwende die gezogene Karte auf dem Spieler
-
 
 // Beispiel für die Nutzung
 const goku = new Character("Goku", 100, [
@@ -446,3 +456,32 @@ const whis = new Character("Whis", 100, [
   block,
   moveCharacter,
 ]);
+
+function selectCharacter(characters) {
+  let characterNames = characters.map((character) => character.name);
+  let selection = prompt(`Wähle einen Charakter: ${characterNames.join(", ")}`);
+  return characters.find((character) => character.name === selection);
+}
+const characters = [
+  goku,
+  vegeta,
+  gohan,
+  trunks,
+  piccolo,
+  krillin,
+  boo,
+  cell,
+  freezer,
+  cooler,
+  nappa,
+  raditz,
+  gokuBlack,
+  broly,
+  jiren,
+  hit,
+  beerus,
+  whis,
+];
+let selectedCharacter = selectCharacter(characters);
+
+console.log(`Du hast ${selectedCharacter.name} ausgewählt.`);
